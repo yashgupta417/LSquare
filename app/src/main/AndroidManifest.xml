@@ -30,7 +30,9 @@
 
         <activity android:name=".newsfeedActivity" />
         <activity android:name=".profileActivity" />
-        <activity android:name=".ShareActivity"></activity>
+        <activity android:name=".ShareActivity" />
+        <activity android:name=".othersProfileActivity" />
+        <activity android:name=".ChatActivity"></activity>
     </application>
 
 </manifest>

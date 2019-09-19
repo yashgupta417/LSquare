@@ -3,11 +3,28 @@
     <item
         android:id="@+id/logout"
         android:icon="@drawable/ic_keyboard_arrow_left_black_24dp"
-        android:onClick="back"
-        android:title="Logout" />
+        android:onClick="logout"
+        android:title="Log Out" />
+    <item
+        android:id="@+id/search"
+        android:icon="@drawable/ic_search_black_24dp"
+        android:title="Search"
+        android:onClick="search"
+        />
+
+    <item android:id="@+id/chat"
+        android:title="Chat"
+        android:icon="@drawable/ic_chat_bubble_black_24dp"
+        android:onClick="chatfrag"
+        />
     <item
         android:id="@+id/user"
         android:icon="@drawable/ic_person_black_24dp"
         android:onClick="profile"
         android:title="Profile" />
+    <item android:id="@+id/home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="Home"
+        android:onClick="home"/>
+
  </menu>

@@ -8,6 +8,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.parse.ParseException;
+import com.parse.ParseObject;
 import com.parse.ParseUser;
 import com.parse.SignUpCallback;
 
@@ -42,6 +43,9 @@ public class SignupActivity extends AppCompatActivity {
                 else{
                     Toast.makeText(SignupActivity.this, "something went wrong", Toast.LENGTH_SHORT).show();
                 }
+                ParseObject parseObject=new ParseObject("followers");
+                parseObject.put("username",loveHandle.getText().toString());
+                parseObject.saveInBackground();
             }
         });
     }

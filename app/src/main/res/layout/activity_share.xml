@@ -24,7 +24,7 @@
         app:srcCompat="@android:color/white" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="22dp"
@@ -55,6 +55,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/editText"
+        app:layout_constraintTop_toBottomOf="@+id/back"
         app:layout_constraintVertical_bias="1.0" />
 </android.support.constraint.ConstraintLayout>

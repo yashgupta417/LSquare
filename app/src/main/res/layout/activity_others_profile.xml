@@ -4,17 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
-    tools:context=".profileActivity">
+    tools:context=".othersProfileActivity">
 
     <ImageView
-        android:id="@+id/profilepic"
+        android:id="@+id/profilepic1"
         android:layout_width="122dp"
         android:layout_height="122dp"
         android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
-        android:onClick="newpic"
         android:scaleType="fitXY"
+        android:src="@drawable/user"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.042"
@@ -22,21 +21,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
-    <ProgressBar
-        android:id="@+id/load"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
-        android:id="@+id/followers"
+        android:id="@+id/followers1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="cursive"
@@ -53,8 +39,21 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.009" />
 
+    <ProgressBar
+        android:id="@+id/load1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
-        android:id="@+id/following"
+        android:id="@+id/following1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -69,17 +68,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.597"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/followers"
+        app:layout_constraintTop_toBottomOf="@+id/followers1"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/handle"
-        android:layout_width="98dp"
-        android:layout_height="22dp"
+        android:id="@+id/handler1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text="TextView"
+        android:text=""
         android:textAlignment="center"
         android:textColor="@android:color/holo_red_light"
         android:textStyle="bold"
@@ -87,34 +86,35 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.085"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profilepic"
+        app:layout_constraintTop_toBottomOf="@+id/profilepic1"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/textView51"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="8dp"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/custom2"
+        android:onClick="doFollowOrUnFollow"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp"
 
-        android:text="Edit Love Handle"
+        android:paddingBottom="5dp"
+        android:text="Follow"
         android:textColor="@android:color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.64"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/following"
+        app:layout_constraintTop_toBottomOf="@+id/following1"
         app:layout_constraintVertical_bias="0.0" />
 
     <ListView
-        android:id="@+id/listView"
+        android:id="@+id/listView1"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="145dp"
@@ -126,50 +126,34 @@
         app:layout_constraintVertical_bias="0.428" />
 
     <TextView
-        android:id="@+id/followersNumber"
+        android:id="@+id/followersNumber1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0"
         android:textColor="@android:color/black"
         android:textSize="25sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/listView"
+        app:layout_constraintBottom_toTopOf="@+id/listView1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/followers"
+        app:layout_constraintStart_toEndOf="@+id/followers1"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.07999998" />
 
     <TextView
-        android:id="@+id/followingsNumber"
+        android:id="@+id/followingsNumber1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0"
         android:textColor="@android:color/black"
         android:textSize="25sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/listView"
+        app:layout_constraintBottom_toTopOf="@+id/listView1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/following"
-        app:layout_constraintTop_toBottomOf="@+id/followersNumber"
+        app:layout_constraintStart_toEndOf="@+id/following1"
+        app:layout_constraintTop_toBottomOf="@+id/followersNumber1"
         app:layout_constraintVertical_bias="0.04000002" />
 
-    <ImageView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="5dp"
-        android:onClick="uploadimg"
-        android:src="@drawable/ic_add_a_photo_black_24dp"
-        android:textColor="@android:color/holo_blue_dark"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/listView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/textView5"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
 
 </android.support.constraint.ConstraintLayout>
